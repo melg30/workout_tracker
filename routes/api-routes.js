@@ -8,16 +8,16 @@ router.post("/api/workouts", (request, response) => {
   });
 });
 
-// router.get("/api/workouts", (request, response) => {
-//   //console.log('request', response);
-//   Workout.find()
-//     .then((dbWorkout) => {
-//       response.json(dbWorkout);
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
+router.get("/api/workouts", (request, response) => {
+  //console.log('request', response);
+  Workout.find()
+    .then((dbWorkout) => {
+      response.json(dbWorkout);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
 
 // router.get("/api/workouts/range", (request, response) => {
 //   Workout.find()
