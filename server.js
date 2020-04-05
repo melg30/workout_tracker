@@ -1,7 +1,7 @@
 // Pull in npm packages needed
 const mongoose = require("mongoose");
 const express = require("express");
-
+require("dotenv").config();
 //Create PORT used
 const PORT = process.env.PORT || 8000;
 
@@ -18,7 +18,7 @@ app.use(require("./routes/api-routes"));
 
 // Mongoose
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+  process.env.MONGODB_URI || "mongodb://localhost/workout_tracker";
 mongoose.connect(MONGODB_URI);
 
 app.listen(PORT, () => {
